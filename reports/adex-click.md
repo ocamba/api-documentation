@@ -1,4 +1,4 @@
-# Click report
+# Adex click report
 host: api.ocamba.com
 
 Use the /v1/reports/adex/click resource to get a custom report. A successful request returns the HTTP 200 OK status code and a JSON or CSV formatted response body. Response body format can be controlled by the HTTP Accept header. By default, this resource returns a CSV formatted response body.
