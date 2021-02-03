@@ -22,7 +22,7 @@ This parameter is optional. Default dimensions are task_id, task_name, delivery_
 | app_name |string|Demo app|The name of the app.|
 
 # Measures
-This parameter represent the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
+This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
 
 Value is a string that can take multiple values separated by a comma.
 
@@ -62,7 +62,7 @@ These parameters are not required.
 # Examples
 **GET STATISTICS DEFAULT**
 
-Sample Request: GET /v1/reports/push/delivery?out=json
+<pre><code>Sample Request: GET /v1/reports/push/delivery?out=json
 
 Authorization: Bearer [bearer_token]
 
@@ -70,11 +70,11 @@ Sample Response:
 
 HTTP/1.1 200 OK
 
-{"total":5926,"items":[{"task_id":"61543","task_name":"#61543","delivery_time":"2020-12-18T14:56:00Z","total_user":807218,"unsubscribed":7,"delivered":807210,"failed":1,"wokenup":372940,"total_click":18},{"task_id":"22304","task_name":"#22304","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"52478","task_name":"#52478","delivery_time":"2020-12-18T14:56:00Z","total_user":204599,"unsubscribed":80,"delivered":204519,"failed":0,"wokenup":70027,"total_click":145},{"task_id":"57398","task_name":"#57398","delivery_time":"2020-12-18T14:56:00Z","total_user":134066,"unsubscribed":1,"delivered":134065,"failed":0,"wokenup":60379,"total_click":9},{"task_id":"59737","task_name":"#59737","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"96874","task_name":"#96874","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"5527","task_name":"5527","delivery_time":"2020-12-18T14:56:00Z","total_user":134986,"unsubscribed":4,"delivered":134982,"failed":0,"wokenup":55690,"total_click":16},{"task_id":"5596","task_name":"#5596","delivery_time":"2020-12-18T14:56:00Z","total_user":183691,"unsubscribed":4,"delivered":183687,"failed":0,"wokenup":80505,"total_click":13},{"task_id":"228547","task_name":"#228547","delivery_time":"2020-12-18T14:56:00Z","total_user":1290,"unsubscribed":0,"delivered":1290,"failed":0,"wokenup":711,"total_click":0},{"task_id":"68411","task_name":" #68411","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0}]}
+{"total":5926,"items":[{"task_id":"61543","task_name":"#61543","delivery_time":"2020-12-18T14:56:00Z","total_user":807218,"unsubscribed":7,"delivered":807210,"failed":1,"wokenup":372940,"total_click":18},{"task_id":"22304","task_name":"#22304","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"52478","task_name":"#52478","delivery_time":"2020-12-18T14:56:00Z","total_user":204599,"unsubscribed":80,"delivered":204519,"failed":0,"wokenup":70027,"total_click":145},{"task_id":"57398","task_name":"#57398","delivery_time":"2020-12-18T14:56:00Z","total_user":134066,"unsubscribed":1,"delivered":134065,"failed":0,"wokenup":60379,"total_click":9},{"task_id":"59737","task_name":"#59737","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"96874","task_name":"#96874","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0},{"task_id":"5527","task_name":"5527","delivery_time":"2020-12-18T14:56:00Z","total_user":134986,"unsubscribed":4,"delivered":134982,"failed":0,"wokenup":55690,"total_click":16},{"task_id":"5596","task_name":"#5596","delivery_time":"2020-12-18T14:56:00Z","total_user":183691,"unsubscribed":4,"delivered":183687,"failed":0,"wokenup":80505,"total_click":13},{"task_id":"228547","task_name":"#228547","delivery_time":"2020-12-18T14:56:00Z","total_user":1290,"unsubscribed":0,"delivered":1290,"failed":0,"wokenup":711,"total_click":0},{"task_id":"68411","task_name":" #68411","delivery_time":"2020-12-18T14:56:00Z","total_user":0,"unsubscribed":0,"delivered":0,"failed":0,"wokenup":0,"total_click":0}]}</code></pre>
 
 **GET STATISTICS BY DATE (SINGLE FORMAT)**
 
-Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivery_time
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivery_time
 
 Authorization: Bearer [bearer_token]
 
@@ -84,53 +84,53 @@ Sample Response:
 
 HTTP/1.1 200 OK
 
-Content-Type: text/csv
+Content-Type: text/csv</code></pre>
 
 **GET STATISTICS BY DATE RANGE (RANGE FORMAT)**
 
-Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-07|2020-12-09
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-07|2020-12-09
 
 Authorization: Bearer [bearer_token]
 
-Accept: text/csv
+Accept: text/csv</code></pre>
 
 **GET STATISTICS BY HOUR (HOUR FORMAT)**
 
-Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08 15:00:00&sort=+delivery_time
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08 15:00:00&sort=+delivery_time
 
 Authorization: Bearer [bearer_token]
 
-Accept: text/csv
+Accept: text/csv</code></pre>
 
 **GET LAST STATISTICS (WHERE TOTAL USER IS GREATER THAN 0)**
 
-Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&total_user=gt:0
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&total_user=gt:0
 
 Authorization: Bearer [bearer_token]
 
-Accept: text/csv
+Accept: text/csv</code></pre>
 
 **GET STATISTICS FILTERED BY TASK ID**
 
-Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&task_id=2113398
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&task_id=2113398
 
 Authorization: Bearer [bearer_token]
 
-Accept: text/csv
+Accept: text/csv</code></pre>
 
 **GET STATISTICS BY TASK ID (FILTERED BY APP ID, SORTED BY DELIVERED)**
 
-Sample Request: GET 127.0.0.1:6161/v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivered&app_id=4189144052
+<pre><code>Sample Request: GET 127.0.0.1:6161/v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivered&app_id=4189144052
 
 Authorization: Bearer [bearer_token]
 
-Accept: text/csv
+Accept: text/csv</code></pre>
 
 ## Report performance (IMPORTANT)
 
 - **A wide date range will increase response time.**
 - **The maximum date range is 100 days.**
 - **It's recommended not to use a date range wider than 30 days.**
-- **The number of requested dimensions in the report will have an increasing effect on response time and amount of data that will be generated by API.**
+- **The number of requested dimensions in the report will have an increasing effect on response time and the amount of data that will be generated by API.**
 - **It's recommended to use a lower number of dimensions in reports.**
 - **The number of requested measures should not have a significant impact on report performance.**
