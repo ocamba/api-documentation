@@ -120,7 +120,7 @@ Accept: text/csv</code></pre>
 
 **GET STATISTICS BY TASK ID (FILTERED BY APP ID, SORTED BY DELIVERED)**
 
-<pre><code>Sample Request: GET 127.0.0.1:6161/v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivered&app_id=4189144052
+<pre><code>Sample Request: /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-08&sort=-delivered&app_id=4189144052
 
 Authorization: Bearer [bearer_token]
 
