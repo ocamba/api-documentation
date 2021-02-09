@@ -1,9 +1,10 @@
 # Reports api documentation
 
 ### Adex reports
-* Click
-* Exchange
-* View
+* click
+* exchange
+* view
 
 ### Push reports
-* Delivery
+* delivery
+* stats
