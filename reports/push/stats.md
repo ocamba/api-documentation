@@ -53,7 +53,7 @@ These parameters are not required.
 | browser_id |int|12|This parameter can be used to filter your data by the specific browser.|
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
-| stat_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range by hours.<br>If “hour format” is used, the report displays stats in this specific hour.<br><br>If you exclude this parameter, the default setup displays "today" stats.<a name="stat_date_anchor"></a>|
+| stat_date |string|2020-12-08|<a name="stat_date_anchor"></a>Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range by hours.<br>If “hour format” is used, the report displays stats in this specific hour.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
 
 # Examples
 **GET STATISTICS BY DATE (SINGLE FORMAT)**
