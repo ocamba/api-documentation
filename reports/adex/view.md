@@ -39,11 +39,11 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | device_id |int|5|The ID of the device.|
 | device_name |string|sony|The name of the device manufacturer.|
 | user_lang |string|en|The language of the user.|
-| tag |int|6|The ID of request type. (1 - 'rtb', 5 - 'native', 6 - 'webpush')|
+| tag |int|6|The ID of request type. (1 - 'open rtb', 5 - 'native', 6 - 'webpush')|
 | connection_type |string|cable/dsl|The type of the connection.|
-| conn_type_id |int|4|The ID of the connection type.|
+| conn_type_id |int|4|The ID of the connection type. (1 - 'dialup', 2 - 'cable/dsl', 3 - 'corporate', 4 - 'cellular')|
 | asn |int|15169|The Autonomous System Number.|
-| organization |string|Google|The Organization is the company or organization to which the ISP has sub-let the IP address range.|
+| isp |string|Google|Internet Service Provider.|
 | city_name |string|Sydney|The name of the city.|
 | city_id |int|6354908|The GeoName ID of the city.| 
 
