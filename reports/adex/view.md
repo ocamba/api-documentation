@@ -43,7 +43,7 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | connection_type |string|cable/dsl|The type of the connection.|
 | conn_type_id |int|4|The ID of the connection type.|
 | asn |int|15169|The Autonomous System Number.|
-| isp |string|Google|The Internet Service Provider.|
+| organization |string|Google|The Organization is the company or organization to which the ISP has sub-let the IP address range.|
 | city_name |string|Sydney|The name of the city.|
 | city_id |int|6354908|The ID of the city.| 
 
