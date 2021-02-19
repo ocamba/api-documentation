@@ -45,7 +45,7 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | asn |int|15169|The Autonomous System Number.|
 | organization |string|Google|The Organization is the company or organization to which the ISP has sub-let the IP address range.|
 | city_name |string|Sydney|The name of the city.|
-| city_id |int|6354908|The ID of the city.| 
+| city_id |int|6354908|The GeoName ID of the city.| 
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure campaign performance by looking at your earnings or number of clicks.
