@@ -25,7 +25,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | exchange_name |string|ExampleExch POP|The name of the exchange.|
 | partner_id |int|56|The ID of the partner.|
 | partner_name |string|Example partner - Push CPC|The name of the partner.|
-| request_id |int|68|The ID of the reqeust.|
+| request_id |int|68|The ID of the request.|
 | placement_id |int|32|The ID of the placement.|
 | os_id |int|12|The ID of the operating system.|
 | os_name |string|Android|The name of the operating system.|
@@ -53,6 +53,8 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | asn |int|15169|The Autonomous System Number.|
 | isp |string|Google|The Internet Service Provider.|
 | user_data_kv |string|ud_tpclk=example|Custom key-value map provided by requestor.|
+| city_name |string|Sydney|The name of the city.|
+| city_id |int|6354908|The ID of the city.| 
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.

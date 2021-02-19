@@ -40,6 +40,12 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | device_name |string|sony|The name of the device manufacturer.|
 | user_lang |string|en|The language of the user.|
 | tag |int|6|The ID of request type. (1 - 'rtb', 5 - 'native', 6 - 'webpush')|
+| connection_type |string|cable/dsl|The type of the connection.|
+| conn_type_id |int|4|The ID of the connection type.|
+| asn |int|15169|The Autonomous System Number.|
+| isp |string|Google|The Internet Service Provider.|
+| city_name |string|Sydney|The name of the city.|
+| city_id |int|6354908|The ID of the city.| 
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure campaign performance by looking at your earnings or number of clicks.
