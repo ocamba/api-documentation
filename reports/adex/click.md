@@ -54,7 +54,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | organization |string|Google|The Organization is the company or organization to which the ISP has sub-let the IP address range.|
 | user_data_kv |string|ud_tpclk=example|Custom key-value map provided by requestor.|
 | city_name |string|Sydney|The name of the city.|
-| city_id |int|6354908|The ID of the city.| 
+| city_id |int|6354908|The GeoName ID of the city.| 
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
