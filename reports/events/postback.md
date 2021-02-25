@@ -17,7 +17,7 @@ Maximum length: 100.
 | event_time |string|2021-02-23 14:00:00|The datetime when the event have happened.|
 | postback_date |string|2021-02-23|The date when the pixel was fired.|
 | postback_time |string|2021-02-23 14:00:00|The datetime when the pixel was fired.|
-| url |string|http://e-1234.example.net/r?e=eyJ0cyI6MTM2Mjc3MT|The pixel URL.|
+| url |string|http://<span></span>e-1234.example.net/r?e=eyJ0cyI6MTM2Mjc3MT|The pixel URL.|
 | domain |string|e-1234.example.net|The domain of the pixel URL.|
 | query |string|e=eyJ0cyI6MTM2Mjc3MT|The query of the pixel URL.|
 | http_code |int|200|The HTTP code of the pixel response.|
@@ -46,7 +46,7 @@ These parameters are not required.
 
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
-| url |string|http://e-1234.example.net/r?e=eyJ0cyI6MTM2Mjc3MT|This parameter can be used to filter your data by the specific URL.|
+| url |string|http://<span></span>e-1234.example.net/r?e=eyJ0cyI6MTM2Mjc3MT|This parameter can be used to filter your data by the specific URL.|
 | domain |string|e-1234.example.net|This parameter can be used to filter your data by the specific domain.|
 | query |string|e=eyJ0cyI6MTM2Mjc3MT|This parameter can be used to filter your data by the specific query.|
 | http_code |int|200|This parameter can be used to filter your data by the specific HTTP code.|
@@ -54,8 +54,8 @@ These parameters are not required.
 | event_type |string|adex_click|This parameter can be used to filter your data by the specific event type.|
 | sort |string|+pixel_count|Sort by field. Value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
-| event_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for events which happened on this specific day.<br>If “range format” is used, the report displays stats for events which happened in this specific range.<br>If “hour format” is used, the report displays stats for events which happened in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li><li></ul>|
-| postback_date |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for pixels fired on this specific day.<br>If “range format” is used, the report displays stats for pixels fired in this specific range.<br>If “hour format” is used, the report displays stats for pixels fired in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li><li></ul>|
+| event_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for events which happened on this specific day.<br>If “range format” is used, the report displays stats for events which happened in this specific range.<br>If “hour format” is used, the report displays stats for events which happened in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| postback_date |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for pixels fired on this specific day.<br>If “range format” is used, the report displays stats for pixels fired in this specific range.<br>If “hour format” is used, the report displays stats for pixels fired in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
 
 # Examples
 **GET RAW STATISTICS (LAST 100 FIRED PIXELS)**
