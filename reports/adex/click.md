@@ -43,7 +43,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | ssp_account_name |string|Testing ssp account|The name of the supply side platform account.|
 | dsp_account_name |string|Testing dsp account|The name of the demmand side platform account.|
 | visitor_ua |string|Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4|The visitor's user agent.|
-| landing_url |string|<span></span>www.example.com|The landing_url of the click.|
+| landing_url |string|www<span></span>.example.com|The landing_url of the click.|
 | task_id |int|25845698|The ID of the task, only if the click was webpush.|
 | date_delivery |int|2020-12-25 05:02:00|The date delivery, only if click was webpush.|
 | ipv4 |string|37.8.65.98|The ipv4 of the user.|
