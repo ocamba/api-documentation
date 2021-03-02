@@ -8,6 +8,7 @@
 ### Push reports
 * delivery
 * stats
+* users
 
 ### Events reports
 * postback
