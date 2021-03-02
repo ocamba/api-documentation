@@ -13,9 +13,9 @@ Maximum length: 100.
 
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
-| date_subscribed |string|2021-02-07 15:00:00|The datetime of the subscription.|
-| date_unsubscribed |string|2021-02-08 11:33:24|The datetime of the unsubscription.|
-| last_touched |string|2021-02-08 11:33:24|The datetime of the last event.|
+| date_subscribed |string|2021-02-07 15:00:00|The DateTime of the subscription.|
+| date_unsubscribed |string|2021-02-08 11:33:24|The DateTime of the unsubscription.|
+| last_touched |string|2021-02-08 11:33:24|The DateTime of the last event.|
 | user_id |int|1008819|The ID of the user.|
 | country_code |string|US|The two-letter country code of the particular country you need data for.|
 | country_name |string|United States|Full name of the particular country you need data for.|
@@ -28,8 +28,8 @@ Maximum length: 100.
 | click_id |string|iP3D8CGXUC1LaA6qEbBEQ|| 
 | app_id |int|1459574831|The ID of the app.|
 | app_name |string|Demo app|The name of the app.|
-| app_type |string|web|The app type -> web, android, ios, safari and the default is unknown.|
-| extra |string|{"userdata":"example"}|
+| app_type |string|web|The app type. Values can be web, android, ios, safari, and the default is unknown.|
+| extra |string|{"userdata":"example"}|Additional information of the user providing you with better insight into the user behavior and preferences.|
 
 
 # Measures
@@ -72,7 +72,7 @@ These parameters are not required.
 # Examples
 **GET STATISTICS BY DATE SUBSCRIBED(SINGLE FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/push/users?dimensions=date_subscribed,user_id, os_name, browser_name&measures=wokenup,impressions,served,clicks,spam_clicks,total_clicks,income,cost&date_subscribed=2021-03-01&sort=-total_clicks
+<pre><code>Sample Request: GET /v1/reports/push/users?dimensions=date_subscribed,user_id,os_name,browser_name&measures=wokenup,impressions,served,clicks,spam_clicks,total_clicks,income,cost&date_subscribed=2021-03-01&sort=-total_clicks
 
 Authorization: Bearer [bearer_token]
 
@@ -82,16 +82,16 @@ Sample Response:
 
 HTTP/1.1 200 OK
 
-date_subscribed,user_id,wokenup,impressions,served,clicks,spam_clicks,total_clicks,income,cost
-2021-03-01T11:20:41Z,25160158,2,2,2,1,10,11,0E+00,0E+00
-2021-03-01T00:48:37Z,24893358,4,4,4,4,4,8,0E+00,0E+00
-2021-03-01T06:12:36Z,25021377,5,5,5,1,5,6,0E+00,0E+00
-2021-03-01T05:33:08Z,25006432,3,3,3,2,4,6,0E+00,0E+00
-2021-03-01T05:07:40Z,24997184,4,4,4,4,2,6,0E+00,0E+00
-2021-03-01T07:59:04Z,25068247,2,2,2,2,3,5,0E+00,0E+00
-2021-03-01T06:12:23Z,25021343,4,4,4,4,1,5,0E+00,0E+00
-2021-03-01T06:48:23Z,25036224,5,5,5,5,0,5,0E+00,0E+00
-2021-03-01T16:09:14Z,25323922,3,3,3,2,3,5,0E+00,0E+00</code></pre>
+date_subscribed,user_id,os_name,browser_name,wokenup,impressions,served,clicks,spam_clicks,total_clicks,income,cost
+2021-03-01T11:20:41Z,25160158,Android,Chrome,2,2,2,1,10,11,0E+00,0E+00
+2021-03-01T00:48:37Z,24893358,Android,Chrome,4,4,4,4,4,8,0E+00,0E+00
+2021-03-01T05:33:08Z,25006432,Android,Chrome,3,3,3,2,4,6,0E+00,0E+00
+2021-03-01T05:07:40Z,24997184,Android,Chrome,4,4,4,4,2,6,0E+00,0E+00
+2021-03-01T06:12:36Z,25021377,Android,Chrome,5,5,5,1,5,6,0E+00,0E+00
+2021-03-01T16:09:14Z,25323922,Android,Chrome,3,3,3,2,3,5,0E+00,0E+00
+2021-03-01T15:35:13Z,25303628,Android,Chrome,2,2,2,2,3,5,0E+00,0E+00
+2021-03-01T06:48:23Z,25036224,Android,Chrome,5,5,5,5,0,5,0E+00,0E+00
+2021-03-01T05:59:06Z,25015998,Android,Chrome,3,3,3,2,3,5,0E+00,0E+00</code></pre>
 
 **GET STATISTICS BY DATE UNSUBSCRIBED (RANGE FORMAT)**
 
@@ -101,7 +101,7 @@ Authorization: Bearer [bearer_token]
 
 Accept: text/csv</code></pre>
 
-**GET STATISTICS BY HOUR (HOUR FORMAT)**
+**GET STATISTICS BY LAST TOUCHED IN SPECIFIC HOUR (HOUR FORMAT)**
 
 <pre><code>Sample Request: GET /v1/reports/push/users?dimensions=country_name&measures=wokenup,impressions,total_clicks,income&last_touched=2021-03-01 15:00:00&sort=-total_clicks
 
