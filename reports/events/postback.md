@@ -25,7 +25,7 @@ Maximum length: 100.
 | event_type |string|push_sub|The event type, it can be adex_click, adex_imp, adex_conv, push_sub, push_unsub, push_wkup.|
 
 # Measures
-This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
+This parameter represents the values that you're measuring. 
 
 Value is a string that can take multiple values separated by a comma.
 This parameter is optional. Default dimensions are retries, incoming, outgoing.

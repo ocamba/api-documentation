@@ -67,8 +67,8 @@ This parameter is optional. Default measures are income, expense.
 
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
-| income |float|16.52|The income of the click.|
-| expense |float|16.52|The expense of the click.|
+| income |float|16.52|The gain derived from any dimension you requested.|
+| expense |float|16.52|The cost incurred in the performance of the requested dimension.|
 | revenue |float|16.52|The difference between income and expense.|
 
 

@@ -38,7 +38,7 @@ This parameter is optional. Default measures are total_user, delivered, wokenup,
 | spam_click |int|94|The total number of spam clicks.|
 | ctr |float|0.15|The rate of clicks to impressions.|
 | ctdr |float|1.23|The rate of clicks to delivered.|
-| income |float|16.52||
+| income |float|16.52|The gain derived from any dimension you requested.|
 | conversion |int|12|The total number of conversions.|
 | total_user |int|2897|The total number of users.|
 | unsubscribed |int|2123|The total number of unsubscribed users.|
