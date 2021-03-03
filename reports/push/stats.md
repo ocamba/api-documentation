@@ -20,7 +20,7 @@ Maximum length: 100.
 | country_name |string|United States|Full name of the particular country you need data for.|
 | source |string|example_source|String used to record and track unique user attributes, traffic sources, banners, and/or link placement.|
 | lang |string|en|The language of the user.|
-| app_type |string|web|The app type -> web, android, ios, safari and the default is unknown.|
+| app_type |string|web|The app type -> web, android, ios, and the default is unknown.|
 | os_id|int|4|The ID of the operating system supported by the Ocamba platform.|
 | os_name|string|Mac OS X|The name of the operating system supported by the Ocamba platform.|
 | browser_id|int|12|The ID of the browser supported by the Ocamba platform.|
@@ -37,6 +37,8 @@ Maximum length: 100.
 | ------ | ---- | ------ | ----- |
 | subscribed |int|15268|The total number of subscribed users.|
 | unsubscribed |int|1277|The total number of unsubscribed users.|
+| user_growth |int|13991|Growth scale of the user base that represents a ratio between subscribed and unsubscribed users. A ratio can be negative since there is a possibility that there are more unsubscribed users than subscribed in a particular time range.|
+
 
 # Other parameters
 

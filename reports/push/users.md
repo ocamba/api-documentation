@@ -25,10 +25,9 @@ Maximum length: 100.
 | browser_name|string|Chrome|The name of the browser supported by the Ocamba platform.|
 | lang |string|en|The language of the user.|
 | source |string|example_source|String used to record and track unique user attributes, traffic sources, banners, and/or link placement.|
-| click_id |string|iP3D8CGXUC1LaA6qEbBEQ|| 
 | app_id |int|1459574831|The ID of the app.|
 | app_name |string|Demo app|The name of the app.|
-| app_type |string|web|The app type. Values can be web, android, ios, safari, and the default is unknown.|
+| app_type |string|web|The app type. Values can be web, android, ios, and the default is unknown.|
 | extra |string|{"userdata":"example"}|Additional information of the user providing you with better insight into the user behavior and preferences.|
 
 
@@ -43,13 +42,13 @@ Maximum length: 100.
 | ------ | ---- | ------ | ----- |
 | wokenup |int|15268|The total number of subscribed users.|
 | served |int|1277|The total number of served ads.|
-| impressions |int|1277|The total number of impressions.|
-| clicks |int|1277|The total number of valid clicks.|
-| spam_clicks |int|1277|The total number of spam clicks.|
-| total_clicks |int|1277|The total number of clicks, including spam clicks.|
-| conversions |int|1277|The total number of conversions.|
-| income |int|1277|The gain derived from any dimension you requested.|
-| cost |int|1277|The cost incurred in the performance of the requested dimension.|
+| impressions |int|2265432|The total number of impressions.|
+| clicks |int|33615|The total number of valid clicks.|
+| spam_clicks |int|535|The total number of spam clicks.|
+| total_clicks |int|34150|The total number of clicks, including spam clicks.|
+| conversions |int|64|The total number of conversions.|
+| income |int|3304.45|The gain derived from any dimension you requested.|
+| cost |int|126.32|The cost incurred in the performance of the requested dimension.|
 
 # Other parameters
 
@@ -67,7 +66,9 @@ These parameters are not required.
 | app_type |string|web|This parameter can be used to filter your data by the app type.|
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
-| date_subscribed/date_unsubscribed/last_touched |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for pixels fired on this specific day.<br>If “range format” is used, the report displays stats for pixels fired in this specific range.<br>If “hour format” is used, the report displays stats for pixels fired in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| date_subscribed |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for users subscribed on this specific day.<br>If “range format” is used, the report displays stats for users subscribed in this specific range.<br>If “hour format” is used, the report displays stats for users subscribed in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| date_unsubscribed |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for users unsubscribed on this specific day.<br>If “range format” is used, the report displays stats for users unsubscribed in this specific range.<br>If “hour format” is used, the report displays stats for users unsubscribed in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| last_touched |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for users which last time had any activity on this specific day.<br>If “range format” is used, the report displays stats for users subscribed in this specific range.<br>If “hour format” is used, the report displays stats for users subscribed in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
 
 # Examples
 **GET STATISTICS BY DATE SUBSCRIBED(SINGLE FORMAT)**
