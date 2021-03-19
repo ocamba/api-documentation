@@ -16,6 +16,7 @@ This parameter is optional. Default dimensions are task_id, task_name, delivery_
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
 | delivery_time | string |2020-11-20 11:40:00|Task execution time.|
+| delivery_date | string |2020-11-20|Task execution date.|
 | task_id |int|1002600|The ID of the task.|
 | task_name |string|Demo task|The name of the task.|
 | app_id |int|1459574831|The ID of the app.|
