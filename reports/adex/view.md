@@ -45,7 +45,8 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | asn |int|15169|The Autonomous System Number.|
 | isp |string|Google|Internet Service Provider.|
 | city_name |string|Sydney|The name of the city.|
-| city_id |int|6354908|The GeoName ID of the city.| 
+| city_id |int|6354908|The GeoName ID of the city.|
+| keyword |string|example_keyword|Comma-separated list of keywords describing the bid request.| 
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure campaign performance by looking at your earnings or number of clicks.

@@ -55,6 +55,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | user_data_kv |string|ud_tpclk=example|Custom key-value map provided by requestor.|
 | city_name |string|Sydney|The name of the city.|
 | city_id |int|6354908|The GeoName ID of the city.| 
+| keyword |string|example_keyword|Comma-separated list of keywords describing the bid request.|
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
