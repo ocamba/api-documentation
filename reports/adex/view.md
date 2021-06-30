@@ -65,6 +65,7 @@ Maximum length: 100.
 | request |int|2897|The total number of requests.|
 | fill |int|2123|The total number of responses with at least one ad.|
 | income |float|16.52|The gain derived from any dimension you requested.|
+| expected_income |float|3.76|The expected gain derived from any dimension you requested.|
 | expense |float|4.58|The cost incurred in the performance of the selected dimension.|
 | revenue |float|11.98|The total earnings, the difference between income and expense.|
 | ctr |float|0.15|The rate of clicks to impressions.|
