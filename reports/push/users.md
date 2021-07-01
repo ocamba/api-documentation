@@ -64,6 +64,7 @@ These parameters are not required.
 | source |string|filter_source|This parameter can be used to filter your data by the specific subid/source.|
 | app_id |string|1002600|App id created on the Ocamba platform. This parameter can be used to filter your data by the specified app.|
 | app_type |string|web|This parameter can be used to filter your data by the app type.|
+| clicker |string|neq:0|This parameter is used to filter your data by the user data "clicker". Allowed operations are equal and not equal. If you want to get users which are already defined as clicker/non clicker, you should only pass the value to the parameter, ex "&clicker=0". If you want to exclude these users in search, you should use not equal operator, ex "&clicker=neq:0".
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
 | status |string|active|This parameter is used if you want to get only active users.|
