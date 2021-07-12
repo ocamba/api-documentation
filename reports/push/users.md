@@ -40,7 +40,7 @@ Maximum length: 100.
 
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
-| wokenup |int|15268|The total number of subscribed users.|
+| wokenup |int|15268|The total number of woken users.|
 | served |int|1277|The total number of served ads.|
 | impressions |int|2265432|The total number of impressions.|
 | clicks |int|33615|The total number of valid clicks.|
