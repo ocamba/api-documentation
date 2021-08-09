@@ -27,6 +27,8 @@ Maximum length: 100.
 | country_name|string|United States|Full name of the particular country you need data for.|
 | device_id|int|4|The ID of the device supported by the Ocamba platform.|
 | device_name|string|SAMSUNG|The name of the device supported by the Ocamba platform.|
+| campaign_id |int|1044852|The ID of the campaign.|
+| campaign_name |string|Testing campaign|The name of the campaign.|
 
 
 # Measures
