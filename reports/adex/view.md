@@ -54,6 +54,8 @@ This parameter represents the values that you're measuring. For example, you can
 Value is a string that can take multiple values separated by a comma.
 Maximum length: 100.
 
+**Note: Request, fill and ftr measures can be segmented only by SSP dimensions (zone). It's impossible to request DSP (campaign, creative, exchange) and SSP related stats simultaneously.**
+
 | parameter | type | example | description
 | ------ | ---- | ------ | ----- |
 | impression |int|15268|The total number of impressions.|
