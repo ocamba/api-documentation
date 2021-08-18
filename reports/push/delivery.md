@@ -21,6 +21,10 @@ This parameter is optional. Default dimensions are task_id, task_name, delivery_
 | task_name |string|Demo task|The name of the task.|
 | app_id |int|1459574831|The ID of the app.|
 | app_name |string|Demo app|The name of the app.|
+| os_id |int|12|The ID of the operating system.|
+| os_name |string|Android|The name of the operating system.|
+| browser_id |int|10|The ID of the browser.|
+| browser_name |string|Chrome|The name of the browser.|
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure app performance by looking at your earnings or number of clicks.
