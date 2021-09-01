@@ -81,6 +81,7 @@ These parameters are not required but can help with filtering, visualizing and m
 | ------ | ---- | ------ | ----- |
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures.  "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter.|
+| spam |int|0|The report can return only spam or only valid clicks. In order to search it, you can specify the "spam" query parameter. Values are 0 (valid click) and 1 (spam click).|
 
 ## Report performance (IMPORTANT)
 
