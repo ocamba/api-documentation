@@ -9,6 +9,7 @@
 * delivery
 * stats
 * users
+* view
 
 ### Events reports
 * postback
