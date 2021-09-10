@@ -28,6 +28,13 @@ Maximum length: 100.
 | app_id |int|1459574831|The ID of the app.|
 | app_name |string|Demo app|The name of the app.|
 | app_type |string|web|The app type. Values can be web, android, ios, and the default is unknown.|
+| conn_type |string|cable/dsl|The type of the connection supported by Ocamba.|
+| conn_type_id |int|4|The ID of the connection type. (1 - 'dialup', 2 - 'cable/dsl', 3 - 'corporate', 4 - 'cellular')|
+| asn |int|15169|The Autonomous System Number supported by Ocamba.|
+| isp |string|Google|Internet Service Provider supported by Ocamba.|
+| city_name |string|Sydney|The name of the city supported by Ocamba.|
+| city_id |int|6354908|The GeoName ID of the city supported by Ocamba.|
+| status |string|subscribed|The status of user. ('subscribed', 'unsubscribed', 'inactive')|
 | extra |string|{"userdata":"example"}|Additional information of the user providing you with better insight into the user behavior and preferences.|
 
 
