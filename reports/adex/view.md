@@ -40,7 +40,7 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | device_name |string|sony|The name of the device manufacturer.|
 | user_lang |string|en|The language of the user.|
 | tag |int|6|The ID of request type. (1 - 'open rtb', 5 - 'native', 6 - 'webpush')|
-| connection_type |string|cable/dsl|The type of the connection.|
+| conn_type |string|cable/dsl|The type of the connection.|
 | conn_type_id |int|4|The ID of the connection type. (1 - 'dialup', 2 - 'cable/dsl', 3 - 'corporate', 4 - 'cellular')|
 | asn |int|15169|The Autonomous System Number.|
 | isp |string|Google|Internet Service Provider.|
