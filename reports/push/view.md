@@ -42,8 +42,10 @@ Maximum length: 100.
 | ------ | ---- | ------ | ----- |
 | click |int|1562|The total number of clicks.|
 | wokenup |int|2435|The total of times user was received message from cloud.|
+| ctr |decimal|154|The rate of clicks to wokenups.|
 | subscriptions |int|2128|The total number of user subscriptions.|
 | unsubscriptions |int|154|The total number of user unsubscriptions.|
+| user_growth |int|154|Growth scale of the user base that represents a ratio between subscribed and unsubscribed users. A ratio can be negative since there is a possibility that there are more unsubscribed users than subscribed in a particular time range.|
 
 # Examples
 **Get statistics by date (hourly breakdown of data)**
