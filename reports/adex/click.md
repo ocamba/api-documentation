@@ -18,6 +18,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | click_date | string |2020-12-03 02:05:12|The date of click.|
 | bid_date | string |2020-12-03 02:04:00|The date of bid request.|
 | diff | string |125|Difference between click_date and bid_date in seconds.|
+| user_id |int|1008819|The ID of the user.|
 | subid |string|source_example|String used to record and track unique user attributes, traffic sources, banners, and/or link placement.|
 | zone_id |int|1009638|The ID of the zone.|
 | zone_name |string|Push zone|The name of the zone.|
