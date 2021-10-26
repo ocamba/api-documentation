@@ -67,7 +67,7 @@ These parameters are not required but can help with filtering, visualizing, and 
 | device_id|int|4|This parameter can be used to filter your data by the specific device.|
 | sort|string|+success|Sort by field. The value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page|string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter.|
-| stat_date|string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: You should use one of the [range operators](#operators) -> rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range.<br>If “hour format” is used, the report displays stats in this specific range by hours.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
+| stat_date|string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: You should use one of the [range operators](#operators) -> rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day.<br>If “range format” is used, the report displays stats in this specific range.<br>If “hour range format” is used, the report displays stats in this specific range by hours.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
 | resolution|string|hour|This parameter additionally defines the stat_date parameter. You should pass `day` or `hour`, which defines what type of breakdown you request, default setup displays daily breakdown. If day is passed, the report displays stats for specific range by days. If hour is passed, the report displays stats for specific range by hour. If you pass the stat_date in the hour format and request the daily resolution, the stat_date will have priority over the resolution.|
 
 # Operators 
@@ -96,13 +96,13 @@ Content-Type: text/csv</code></pre>
 
 **GET STATISTICS BY DATE RANGE (RANGE FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,partner_name&measures=success,failed&stat_date=2021-01-10|2021-01-15
+<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,partner_name&measures=success,failed&stat_date=rf:2021-01-10,2021-01-15
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 
 **GET STATISTICS BY HOUR (HOUR FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,subid&measures=click,spam_click&sort=-click&stat_date=2021-02-02 16:00:00
+<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,subid&measures=click,spam_click&sort=-click&stat_date=2021-02-02&resolution=hour
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 

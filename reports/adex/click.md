@@ -83,6 +83,16 @@ These parameters are not required but can help with filtering, visualizing and m
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures.  "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter.|
 | spam |int|0|The report can return only spam or only valid clicks. In order to search it, you can specify the "spam" query parameter. Values are 0 (valid click) and 1 (spam click).|
+| click_date|string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: You should use one of the [range operators](#operators) -> rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day.<br>If “range format” is used, the report displays stats in this specific range.<br>If “hour range format” is used, the report displays stats in this specific range by hours.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
+
+# Operators 
+<a name="operators"></a>
+| operator | description | behavior |
+| --- | ----- | -------- |
+| r|range|The value must be in a specified open range, where both endpoints are excluded.|
+| rf|range full|The value must be in a specified closed range, where both endpoints are included.|
+| rl|range left|The value must be in a specified half-open range, where only left or start point is included.|
+| rr|range right|The value must be in a specified half-open range, where only right or end point is included.|
 
 ## Report performance (IMPORTANT)
 

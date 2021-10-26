@@ -62,7 +62,7 @@ These parameters are not required.
 | app_id |string|1002600|App id created on the Ocamba platform. This parameter can be used to filter your data by the specified app.|
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
-| delivery_time |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for tasks executed on this specific day.<br>If “range format” is used, the report displays stats for tasks executed in this specific range.<br>If “hour format” is used, the report displays stats for tasks executed in this specific hour.<br><br>If you exclude this parameter, the default setup displays the last executed tasks. This case requires dimension delivery_time.|
+| delivery_time |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d,Y-m-d<br>Hour range format: Y-m-d hh:00:00,Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for tasks executed on this specific day.<br>If “range format” is used, the report displays stats for tasks executed in this specific range.<br>If “hour range format” is used, the report displays stats for tasks executed in this specific hour range.<br><br>If you exclude this parameter, the default setup displays the last executed tasks. This case requires dimension delivery_time.|
 
 # Examples
 **GET STATISTICS DEFAULT**
@@ -93,7 +93,7 @@ Content-Type: text/csv</code></pre>
 
 **GET STATISTICS BY DATE RANGE (RANGE FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-07|2020-12-09
+<pre><code>Sample Request: GET /v1/reports/push/delivery?dimensions=delivery_time,task_name&measures=total_user,unsubscribed,delivered,wokenup,failed,income,total_click&delivery_time=2020-12-07,2020-12-09
 
 Authorization: Bearer [bearer_token]
 

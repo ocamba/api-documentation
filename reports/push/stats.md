@@ -55,7 +55,7 @@ These parameters are not required.
 | browser_id |int|12|This parameter can be used to filter your data by the specific browser.|
 | sort |string|+delivered|Sort by field. Value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.<a name="stat_date_anchor"></a>|
-| stat_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range by hours.<br>If “hour format” is used, the report displays stats in this specific hour.<br><br>If you exclude this parameter, the default setup displays "today" stats.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li><li>infinity</ul><br>When getting summary statistics it is needed to use the infinity label. In that case, you can not request hourly/daily breakdown by adding the stat_date in the dimensions parameter.|
+| stat_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d,Y-m-d<br>Hour range format: Y-m-d hh:00:00,Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day.<br>If “range format” is used, the report displays stats in this specific range.<br>If “hour range format” is used, the report displays stats in this specific range by hours.<br><br>If you exclude this parameter, the default setup displays "today" stats.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li><li>infinity</ul><br>When getting summary statistics it is needed to use the infinity label. In that case, you can not request hourly/daily breakdown by adding the stat_date in the dimensions parameter.|
 
 # Examples
 **GET STATISTICS BY DATE (SINGLE FORMAT)**
@@ -74,7 +74,7 @@ Content-Type: text/csv</code></pre>
 
 **GET STATISTICS BY DATE RANGE (RANGE FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/push/stats?stat_date=2021-02-05|2021-02-07&dimensions=os_id,os_name&measures=subscribed,unsubscribed
+<pre><code>Sample Request: GET /v1/reports/push/stats?stat_date=rf:2021-02-05,2021-02-07&dimensions=os_id,os_name&measures=subscribed,unsubscribed
 
 Authorization: Bearer [bearer_token]
 
@@ -82,7 +82,7 @@ Accept: text/csv</code></pre>
 
 **GET STATISTICS BY HOUR (HOUR FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/push/stats?stat_date=2021-02-06 15:00:00&dimensions=browser_id,browser_name&measures=subscribed,unsubscribed
+<pre><code>Sample Request: GET /v1/reports/push/stats?stat_date=2021-02-06 15:00:00,2021-02-06 16:00:00&dimensions=browser_id,browser_name&measures=subscribed,unsubscribed
 
 Authorization: Bearer [bearer_token]
 
@@ -99,7 +99,7 @@ Accept: text/csv</code></pre>
 
 **GET TOP FIVE COUNTRIES BY THE NUMBER OF SUBSCRIBED USERS FOR THE SPECIFIC HOUR**
 
-<pre><code>Sample Request: GET /v1/reports/push/stats?dimensions=country_name&measures=subscribed&stat_date=2021-02-07 12:00:00&page=1,5&sort=-subscribed
+<pre><code>Sample Request: GET /v1/reports/push/stats?dimensions=country_name&measures=subscribed&stat_date=2021-02-07 12:00:00,2021-02-07 13:00:00&page=1,5&sort=-subscribed
 
 Authorization: Bearer [bearer_token]
 
