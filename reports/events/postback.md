@@ -54,8 +54,17 @@ These parameters are not required.
 | event_type |string|adex_click|This parameter can be used to filter your data by the specific event type.|
 | sort |string|+postback_count|Sort by field. The value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page |string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter. The default setup is to return the first 100 results.|
-| event_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for events that happened on this specific day.<br>If “range format” is used, the report displays stats for events that happened in this specific range.<br>If “hour format” is used, the report displays stats for events that happened in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
-| postback_date |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for postbacks fired on this specific day.<br>If “range format” is used, the report displays stats for postbacks fired in this specific range.<br>If “hour format” is used, the report displays stats for postbacks fired in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| event_date |string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: You should use one of the [range operators](#operators) -> rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for events that happened on this specific day.<br>If “range format” is used, the report displays stats for events that happened in this specific range.<br>If “hour format” is used, the report displays stats for events that happened in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+| postback_date |string|2021-02-20 11:00:00|Interval of time.<br>Single Format: Y-m-d<br>Range format: You should use one of the [range operators](#operators) -> rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for postbacks fired on this specific day.<br>If “range format” is used, the report displays stats for postbacks fired in this specific range.<br>If “hour format” is used, the report displays stats for postbacks fired in this specific hour.<br><br>For easier search, Reports API gives you the possibility of using one of the following labels:<br><ul><li>today</li><li>yesterday</li><li>last-7-days</li><li>last-30-days</li><li>last-24-hours</li><li>this-month</li><li>last-month</li></ul>|
+
+# Operators 
+<a name="operators"></a>
+| operator | description | behavior |
+| --- | ----- | -------- |
+| r|range|The value must be in a specified open range, where both endpoints are excluded.|
+| rf|range full|The value must be in a specified closed range, where both endpoints are included.|
+| rl|range left|The value must be in a specified half-open range, where only left or start point is included.|
+| rr|range right|The value must be in a specified half-open range, where only right or end point is included.|
 
 # Examples
 **GET RAW STATISTICS (LAST 100 FIRED POSTBACKS)**
@@ -74,7 +83,7 @@ Content-Type: text/csv</code></pre>
 
 **GET STATISTICS BY DATE RANGE (RANGE FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/events?sort=event_type,http_code&dimensions=event_type,http_code&measures=postback_count&postback_date=2021-02-20|2021-02-21
+<pre><code>Sample Request: GET /v1/reports/events?sort=event_type,http_code&dimensions=event_type,http_code&measures=postback_count&postback_date=rf:2021-02-20,2021-02-23
 
 Authorization: Bearer [bearer_token]
 
@@ -92,7 +101,7 @@ push_unsub,520,1</code></pre>
 
 **GET STATISTICS BY HOUR (HOUR FORMAT)**
 
-<pre><code>Sample Request: GET /v1/reports/events?postback_date=2021-02-23 11:00:00&measures=postback_count&dimensions=http_code,error_code&sort=http_code,error_code&event_type=push_sub&out=json
+<pre><code>Sample Request: GET /v1/reports/events?postback_date=rl:2021-10-23 11:00:00,2021-10-23 12:00:00&measures=postback_count&dimensions=http_code,error_code&sort=http_code,error_code&event_type=push_sub&out=json
 
 Authorization: Bearer [bearer_token]
 
