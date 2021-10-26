@@ -77,7 +77,7 @@ Maximum length: 100.
 # Examples
 **Get statistics by date (hourly breakdown of data)**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=stat_date&measures=impression,total_click,revenue&stat_date=2020-09-15
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=stat_date&measures=impression,total_click,revenue&stat_date=2020-09-15&resolution=hour
 Authorization: Bearer [bearer_token]
 Accept: text/csv
 
@@ -98,7 +98,7 @@ stat_date,impression,total_click,revenue
 
 **Get statistics by date Range(daily breakdown of data)**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=stat_date&measures=impression,total_click,revenue&stat_date=2020-09-15|2020-09-22
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=stat_date&measures=impression,total_click,revenue&stat_date=rl:2020-09-15,2020-09-22
 Authorization: Bearer [bearer_token]
 Accept: text/csv
 
@@ -117,24 +117,24 @@ stat_date,impression,total_click,revenue
 
 **Get statistics by CAMPAIGN**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=campaign_id&measures=impression,total_click,revenue&stat_date=2020-09-15|2020-09-22
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=campaign_id&measures=impression,total_click,revenue&stat_date=rf:2020-09-15,2020-09-22
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 
 **Get statistics by subid (filtered by campaign_ID)**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=subid&measures=impression,total_click,revenue&stat_date=2020-09-20|2020-09-22&campaign_id=1000000
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=subid&measures=impression,total_click,revenue&stat_date=r:2020-09-20,2020-09-22&campaign_id=1000000
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 
 **Get statistics by OS (sorted by Impressions)**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=os_id&measures=impression,total_click,revenue&stat_date=2020-09-20|2020-09-22&sort=impression
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=os_id&measures=impression,total_click,revenue&stat_date=rf:2020-09-22 00:00:00,2020-09-22 15:00:00&sort=impression
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 
 **Get statistics by OS (sorted by Impressions AND LIMITED to 10 results)**
 
-<pre><code>Sample Request: GET /v1/reports/adex?dimensions=os_id&measures=impression,total_click,revenue&stat_date=2020-09-20|2020-09-22&sort=impression&page=1,10
+<pre><code>Sample Request: GET /v1/reports/adex?dimensions=os_id&measures=impression,total_click,revenue&stat_date=rf:2020-09-20,2020-09-22&sort=impression&page=1,10
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>

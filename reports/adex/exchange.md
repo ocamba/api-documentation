@@ -67,7 +67,16 @@ These parameters are not required but can help with filtering, visualizing, and 
 | device_id|int|4|This parameter can be used to filter your data by the specific device.|
 | sort|string|+success|Sort by field. The value should be one of the selected dimensions or measures. "+" represents ascending order, "-" descending.| 
 | page|string|2,10|The report can return data paginated by n items. In order to paginate through data, you can specify the “page” query parameter.|
-| stat_date|string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: Y-m-d &#124; Y-m-d<br>Hour range format: Y-m-d hh:00:00 &#124; Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range by hours.<br>If “hour format” is used, the report displays stats in this specific hour.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
+| stat_date|string|2020-12-08|Interval of time.<br>Single Format: Y-m-d<br>Range format: <br>You should use one of the [range operators](#operators): rf:Y-m-d,Y-m-d<br>Hour range format: rl:Y-m-d hh:00:00,Y-m-d hh:00:00<br>Hour format: Y-m-d hh:00:00<br><br>If “single format” is used, the report displays stats for this specific day by hours.<br>If “range format” is used, the report displays stats in this specific range.<br>If “hour format” is used, the report displays stats in this specific range by hours.<br><br>If you exclude this parameter, the default setup displays "today" stats.|
+| resolution|string|hour|This parameter additionally defines the stat_date parameter. You should pass `day` or `hour`, which defines what type of breakdown you request, default setup displays daily breakdown. If day is passed, the report displays stats for specific range by days. If hour is passed, the report displays stats for specific range by hour. If you pass the stat_date in the hour format and request the daily resolution, the stat_date will have priority over the resolution. |
+
+# Operators 
+<a name="operators"></a>
+| operator | description | behavior |
+| r|range|The value must be in a specified open range, where both endpoints are excluded.|
+| rf|range full|The value must be in a specified closed range, where both endpoints are included.|
+| rl|range left|The value must be in a specified half-open range, where only left or start point is included.|
+| rr|range right|The value must be in a specified half-open range, where only right or end point is included.|
 
 # Examples
 **GET STATISTICS BY DATE (SINGLE FORMAT)**
@@ -104,7 +113,7 @@ Accept: text/csv</code></pre>
 
 **GET STATISTICS FILTERED BY SUBID**
 
-<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,partner_name,exchange_name&measures=impression,total_click,ctr,income&sort=-stat_date&stat_date=2021-02-01&subid=source_example
+<pre><code>Sample Request: GET /v1/reports/adex/exchange?dimensions=stat_date,partner_name,exchange_name&measures=impression,total_click,ctr,income&sort=-stat_date&stat_date=rf:2021-02-01,2021-02-10&subid=source_example
 Authorization: Bearer [bearer_token]
 Accept: text/csv</code></pre>
 
