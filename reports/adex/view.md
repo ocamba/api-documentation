@@ -47,8 +47,8 @@ Dimensions are attributes of your data. Value is a string that can take multiple
 | city_name |string|Sydney|The name of the city.|
 | city_id |int|6354908|The GeoName ID of the city.|
 | keyword |string|here goes example|Characteristic set of words or a phrase which describes the bid request.|
-| app_id	|int|126598752|Push app id created on Ocamba platform.|
-| app_name	|string|test.demo.com|Push app name created on Ocamba platform.|
+| push_app_id	|int|126598752|Push app id created on Ocamba platform.|
+| push_app_name	|string|test.demo.com|Push app name created on Ocamba platform.|
 
 # Measures
 This parameter represents the values that you're measuring. For example, you can measure campaign performance by looking at your earnings or number of clicks.
