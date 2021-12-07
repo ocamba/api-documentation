@@ -49,7 +49,7 @@ This parameter is optional. Default dimensions are click_date, bid_date, id, use
 | date_delivery |int|2020-12-25 05:02:00|The date delivery, only if click was webpush.|
 | ipv4 |string|37.8.65.98|The ipv4 of the user.|
 | ipv6 |string|2001:0db8:85a3:0000:0000:8a2e:0370:7334|The ipv6 of the user.|
-| connection_type |string|cable/dsl|The type of the connection.|
+| conn_type |string|cable/dsl|The type of the connection.|
 | conn_type_id |int|4|The ID of the connection type. (1 - 'dialup', 2 - 'cable/dsl', 3 - 'corporate', 4 - 'cellular')|
 | asn |int|15169|The Autonomous System Number.|
 | isp |string|Google|Internet Service Provider.|
