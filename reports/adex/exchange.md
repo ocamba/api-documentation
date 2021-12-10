@@ -29,6 +29,8 @@ Maximum length: 100.
 | device_name|string|SAMSUNG|The name of the device supported by the Ocamba platform.|
 | campaign_id |int|1044852|The ID of the campaign.|
 | campaign_name |string|Testing campaign|The name of the campaign.|
+| zone_id |int|1009638|The ID of the zone.|
+| zone_name |string|Push zone|The name of the zone.|
 
 
 # Measures
